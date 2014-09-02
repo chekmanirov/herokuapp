@@ -32,5 +32,9 @@
     "heroku",
     "express"
   ],
+  "repository": {
+  "type": "git",
+  "url": "git://github.com/chekmanirov/herokuapp.git"
+	},
   "license": "MIT"
 }
