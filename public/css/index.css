@@ -25,14 +25,14 @@ body {
 }
 
 .front-welcome-logo {
-	left: 42px;
+	left: 48px;
 	position: relative;
 	width: 200px;
 }
 
 .front-welcome-applicant-name {
 	float: left;
-	left: 34px;
+	left: 40px;
 	position: relative;
 	vertical-align: middle;
 	top: 2px;
