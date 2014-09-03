@@ -2,6 +2,7 @@
 
 // set up ======================================================================
 // get all the tools we need
+require('newrelic');
 var express  = require('express');
 var app      = express();
 var port     = process.env.PORT || 8080;
