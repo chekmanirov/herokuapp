@@ -1,0 +1,30 @@
+body {
+	background: #1b1b24;
+}
+
+.front-welcome {
+	color: white;
+	text-align: center;
+}
+
+.front-welcome-applicant-logo {
+	position: relative;
+	left: 50%;
+	width: 500px;
+	margin-left: -250px;
+	height: 80px;
+}
+
+.front-welcome-logo {
+	left: 42px;
+	position: relative;
+	width: 200px;
+}
+
+.front-welcome-applicant-name {
+	float: left;
+	left: 34px;
+	position: relative;
+	vertical-align: middle;
+}
+
