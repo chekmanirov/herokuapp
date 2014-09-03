@@ -38,6 +38,11 @@ body {
 	top: 2px;
 }
 
+.login-alert {
+	padding-top:5px;
+	padding-bottom: 5px;
+}
+
 #welcome-instructions {
 	color: white;
 }

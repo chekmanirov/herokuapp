@@ -3,4 +3,6 @@
 $(document).ready(function(){
   //Floatlabel
   $('input').floatlabel();
+  if($('.alert').length > 0)
+	  $('input').keypress(function(){$('.alert').fadeOut("slow");});
 });

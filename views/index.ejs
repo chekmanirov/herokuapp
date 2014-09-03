@@ -26,11 +26,11 @@
 			</div>
 	</div>
 </div>
-<% if (message.length > 0) { %>
-		<div class="alert alert-danger"><%= message %></div>
-	<% } %>
 <div class="container auth">
     <div id="big-form" class="well auth-box">
+    <% if (message.length > 0) { %>
+		<div class="alert alert-danger login-alert"><%= message %></div>
+	<% } %>
       <form action="/login" method="post">
         <fieldset>       
   		<div class="form-group">
