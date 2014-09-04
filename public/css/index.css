@@ -228,7 +228,6 @@ body {
 	position: fixed; 
 	bottom: 0; 
 	margin-bottom: 50px; 
-	min-width: 974px; 
 	width: 100%; 
     background: none; 
     border: none; 
@@ -271,4 +270,8 @@ body {
 
 #footer-nav li a {
 	color: white !important;
+}
+
+#login-submit {
+	width: 100%;
 }
