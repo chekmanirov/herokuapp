@@ -1,3 +1,19 @@
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+/* Styles */
+#login-submit {
+	width: 100%;
+}
+
+#footer-nav li {
+	margin-left: 15px; 
+	margin-top: 5px; 
+	margin-bottom: 5px; 
+	display: block;
+}
+}
+
 body {
 	background: #1b1b24;
 	/*  background:url('/img/vines-bg.jpg');*/
@@ -270,13 +286,4 @@ body {
 
 #footer-nav li a {
 	color: white !important;
-}
-
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px) {
-/* Styles */
-#login-submit {
-	width: 100%;
-}
 }
