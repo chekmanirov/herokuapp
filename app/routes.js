@@ -9,6 +9,20 @@ module.exports = function(app, passport) {
 	});
 	
 	// =====================================
+	// LEGAL ===============================
+	// =====================================
+	app.get('/legal', function(req, res) {
+		res.render('legal.ejs'); // load the legal.ejs file
+	});
+	
+	// =====================================
+	// ABOUT ===============================
+	// =====================================
+	app.get('/about', function(req, res) {
+		res.render('about.ejs'); // load the about.ejs file
+	});
+	
+	// =====================================
 	// LOGIN ===============================
 	// =====================================
 	// show the login form
@@ -25,6 +39,17 @@ module.exports = function(app, passport) {
 		failureFlash : true // allow flash messages
 	}));
 
+	// =====================================
+	// PROFILE ==============================
+	// =====================================
+	// show the profile page
+	
+	app.get('/profile', isLoggedIn, function(req, res) {
+		res.render('profile.ejs', {
+			user : req.user // get the user out of session and pass to template
+		});
+	});
+	
 	// =====================================
 	// SIGNUP ==============================
 	// =====================================
@@ -47,8 +72,8 @@ module.exports = function(app, passport) {
 	// =====================================
 	// we will want this protected so you have to be logged in to visit
 	// we will use route middleware to verify this (the isLoggedIn function)
-	app.get('/profile', isLoggedIn, function(req, res) {
-		res.render('profile.ejs', {
+	app.get('/users', isLoggedIn, function(req, res) {
+		res.render('users.ejs', {
 			user : req.user // get the user out of session and pass to template
 		});
 	});

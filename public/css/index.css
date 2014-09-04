@@ -223,3 +223,38 @@ body {
   left:0!important;
   top: 1px!important;
 }
+
+#footer {
+	position: fixed; bottom: 0; margin-bottom: 50px; min-width: 974px; width: 100%; 
+    background: none; border: none; padding-top: 15px; padding-bottom: 15px; padding-left: 15px; padding-right: 0px; text-align: center;
+}
+
+.wrapper {
+	width: auto; display: -moz-inline-stack; display: inline-block; vertical-align: middle; zoom: 1;
+}
+
+#footer-nav {
+	padding: 0px;
+	list-style-type:none;
+	font-weight: bold; 
+	font-size: 12px; 
+	line-height: 14px; 
+	color: #fff; 
+	font-weight: normal; 
+	display: -moz-inline-stack; 
+	display: inline-block; 
+	vertical-align: middle; 
+	zoom: 1;
+}
+
+#footer-nav li {
+	margin-right: 8px; 
+	padding-right: 8px; 
+	margin-top: 5px; 
+	margin-bottom: 5px; 
+	float: left;
+}
+
+#footer-nav li a {
+	color: white !important;
+}
