@@ -1,9 +1,10 @@
 @media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px) {
-/* Styles */
-#login-submit {
-	width: 100%;
+and (max-width : 320px) {
+/* mobile portrait styles */
+
+#footer {
+	text-align: left;
+	padding-left: 30px;
 }
 
 #footer-nav li {
@@ -12,6 +13,15 @@ and (max-device-width : 480px) {
 	margin-bottom: 5px; 
 	display: block;
 	float: none !important;
+}
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+/* mobile styles */
+#login-submit {
+	width: 100%;
 }
 }
 
