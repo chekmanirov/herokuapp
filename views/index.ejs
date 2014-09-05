@@ -1,6 +1,6 @@
 <!-- views/index.ejs -->
 <!doctype html>
-<html>
+<html ng-app="InertanceIndexApp">
 <head>
 	<title>heroku + kevin me</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -9,7 +9,11 @@
 	<link rel="stylesheet" href="/css/index.css">
 	<script type="text/javascript" src="/js/jquery.min.js"></script>
 	<script type="text/javascript" src="/js/index.js"></script>
+	<script type="text/javascript" src="/js/angular.min.js"></script>
+	<script type="text/javascript" src="/js/angular-route.min.js"></script>
+	<script type="text/javascript" src="/js/angular-animate.min.js"></script>
 	<script type="text/javascript" src="/js/googleanalytics.js"></script>
+	<script type="text/javascript" src="/js/ng/index.js"></script>
 </head>
 <body>
 <div class="container-fluid">
@@ -30,15 +34,15 @@
 		<div class="alert alert-danger login-alert"><%= message %></div>
 	<% } %>
       <form action="/login" method="post">
-        <fieldset>       
+        <fieldset ng-controller="LoginFormController">       
   		<div class="form-group">
-			<label class="sr-only" for="loginUsername">username</label>
-			<input id="loginUsername" type="text" class="form-control" name="username" placeholder ="username" value="herokuteam">
+			<label ng-show="usernameValue != ''" id="usernameLabel" for="loginUsername" class="label-floatlabel">username</label>
+			<input ng-model="usernameValue" ng-init="herokuteam" id="loginUsername" type="text" class="form-control" name="username" placeholder ="username">
 		</div>
 
         <div class="form-group">
-			<label class="sr-only" for="loginPassword">password</label>
-			<input id="loginPassword" type="password" class="form-control" name="password" placeholder="password" autocomplete="off">
+			<label ng-show="passwordValue != ''" id="passwordLabel" for="loginPassword" class="label-floatlabel reveal-animation">password</label>
+			<input ng-model="passwordValue" id="loginPassword" type="password" class="form-control" name="password" placeholder="password" autocomplete="off">
 		</div>
 
         <button type="submit" class="btn btn-default" id="login-submit">Log in</button>
