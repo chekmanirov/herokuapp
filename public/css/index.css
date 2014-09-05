@@ -2,9 +2,9 @@
 and (max-width : 320px) {
 /* mobile portrait styles */
 
-.front-welcome-logo {
+/*.front-welcome-logo {
 	height: 40px !important;
-}
+}*/
 
 #footer {
 	text-align: left !important;
