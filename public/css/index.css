@@ -297,8 +297,8 @@ border-bottom-right-radius: 10px !important;
   font-weight: 300;
   font-size: 11px;
   color:#fff;
-  left:0!important;
-  /*top: 1px!important;*/
+  margin: 0 !important;
+
 }
 
 #footer {
