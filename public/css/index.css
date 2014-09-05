@@ -29,9 +29,28 @@ and (max-device-width : 480px) {
 }
 }
 
+@media only screen 
+and (max-height : 629px) {
+/* mobile styles */
+#footer {
+	position: fixed; 
+	top: 544px !important; 
+}
+}
+
+@media only screen 
+and (min-height : 630px) {
+/* full size */
+#footer {
+	position: fixed; 
+	bottom: 0; 
+}
+}
+
+
 body {
-	background: #1b1b24;
-	/*  background:url('/img/vines-bg.jpg');*/
+	/*background: #1b1b24;*/
+	background:url('/img/vines-bg.jpg');
 }
 
 .form-control {
@@ -47,18 +66,26 @@ body {
 	text-align: center;
 }
 
+.front-welcome .rowcol {
+	height: 100%;
+}
+
+.front-welcome .row {
+	height: 80px;
+}
+
 .front-welcome-applicant-logo {
 	position: relative;
 	left: 50%;
 	width: 500px;
 	margin-left: -250px;
-	height: 80px;
+	height: 100%;
 }
 
 .front-welcome-logo {
 	left: 48px;
 	position: relative;
-	height: 80px;
+	height: 100%;
 }
 
 .front-welcome-applicant-name {
@@ -256,14 +283,10 @@ body {
 }
 
 #footer {
-	position: fixed; 
-	bottom: 0; 
-	margin-bottom: 50px; 
 	width: 100%; 
     background: none; 
     border: none; 
-    padding-top: 15px; 
-    padding-bottom: 15px; 
+    padding-bottom: 50px; 
     padding-left: 15px; 
     padding-right: 0px; 
     text-align: center;
