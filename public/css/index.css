@@ -292,7 +292,7 @@ body {
   font-size: 11px;
   color:#fff;
   left:0!important;
-  top: 1px!important;
+  /*top: 1px!important;*/
 }
 
 #footer {
@@ -338,17 +338,4 @@ body {
 
 #footer-nav li a {
 	color: white !important;
-}
-
-.reveal-animation.ng-enter {
-  -webkit-animation: enter_sequence 1s linear; /* Safari/Chrome */
-  animation: enter_sequence 1s linear; /* IE10+ and Future Browsers */
-}
-@-webkit-keyframes enter_sequence {
-  from { opacity:0; }
-  to { opacity:1; }
-}
-@keyframes enter_sequence {
-  from { opacity:0; }
-  to { opacity:1; }
 }

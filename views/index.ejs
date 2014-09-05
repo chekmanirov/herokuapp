@@ -37,11 +37,11 @@
         <fieldset ng-controller="LoginFormController">       
   		<div class="form-group">
 			<label ng-show="usernameValue != ''" id="usernameLabel" for="loginUsername" class="label-floatlabel">username</label>
-			<input ng-model="usernameValue" ng-init="herokuteam" id="loginUsername" type="text" class="form-control" name="username" placeholder ="username">
+			<input ng-model="usernameValue" ng-init="usernameValue='herokuteam'" id="loginUsername" type="text" class="form-control" name="username" placeholder ="username">
 		</div>
 
         <div class="form-group">
-			<label ng-show="passwordValue != ''" id="passwordLabel" for="loginPassword" class="label-floatlabel reveal-animation">password</label>
+			<label ng-show="passwordValue != ''" id="passwordLabel" for="loginPassword" class="label-floatlabel">password</label>
 			<input ng-model="passwordValue" id="loginPassword" type="password" class="form-control" name="password" placeholder="password" autocomplete="off">
 		</div>
 
