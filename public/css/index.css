@@ -81,11 +81,9 @@ body {
 	height: 100%;
 }
 
-/*.front-welcome-logo {
-	left: 48px;
-	position: relative;
-	height: 100%;
-}*/
+.front-welcome-logo {
+	max-height: 100%;
+}
 
 .front-welcome-applicant-name {
 	float: left;
