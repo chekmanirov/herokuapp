@@ -3,7 +3,8 @@ and (max-width : 320px) {
 /* mobile portrait styles */
 
 /*.front-welcome-logo {
-	height: 40px !important;
+	height: 40px !important
+	;
 	left: 130px !important;
 }*/
 
@@ -83,11 +84,11 @@ body {
 	height: 100%;
 }
 
-.front-welcome-logo {
+/*.front-welcome-logo {
 	left: 48px;
 	position: relative;
 	height: 100%;
-}
+}*/
 
 .front-welcome-applicant-name {
 	float: left;
