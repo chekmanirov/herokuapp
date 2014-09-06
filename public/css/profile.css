@@ -7,19 +7,24 @@
 	background: #1b1b24;
 }
 
+@media only screen 
+and (min-width : 768px) {
 	#intro .section-text {
 		margin-top:200px;
 	}
+}
 
 #section-1 {
 	padding-top:50px;
 	padding-bottom: 50px;
 }
 
+@media only screen 
+and (min-width : 768px) {
 	#section-1 .section-image {
 		margin-top:50px;
 	}
-
+}
 
 
 @media only screen 
