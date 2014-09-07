@@ -1,10 +1,32 @@
+@media only screen 
+and (max-width : 450px) {
+/* mobile portrait styles */
+
+#footer {
+	text-align: left !important;
+	padding-left: 30px;
+}
+
+#footer-nav li {
+	margin-left: 15px; 
+	margin-top: 5px; 
+	margin-bottom: 5px; 
+	display: block;
+	float: none !important;
+}
+}
+
+
 /*section-specific styles*/
 /*TODO: extract styles out to mongohq*/
 #intro {
-	padding-top:50px;
-	padding-bottom: 50px;
 	color: white;
 	background: #1b1b24;
+}
+
+#section-2 {
+	color: white;
+	background: #002a5c;
 }
 
 @media only screen 
@@ -12,11 +34,6 @@ and (min-width : 768px) {
 	#intro .section-text {
 		margin-top:200px;
 	}
-}
-
-#section-1 {
-	padding-top:50px;
-	padding-bottom: 50px;
 }
 
 @media only screen 
@@ -33,6 +50,11 @@ and (min-width : 768px) {
 #li-user {
 	display: block !important;
 }
+}
+
+.profile-section {
+		padding-top:50px;
+	padding-bottom: 50px;
 }
 
 header {
@@ -89,4 +111,62 @@ padding-right: 30px;
 
 #fide-card {
 	text-decoration: underline;
+}
+
+.summary-lead {
+margin-bottom: 5px;
+font-size: 16px;
+font-weight: 300;
+line-height: 1.4;
+}
+
+#footer {
+	width: 100%; 
+    background: #202020; 
+    border: none; 
+    padding-top: 15px;
+    padding-bottom: 15px; 
+    padding-left: 15px; 
+    padding-right: 0px; 
+    text-align: center;
+}
+
+.wrapper {
+	width: auto; 
+	display: -moz-inline-stack; 
+	display: inline-block; 
+	vertical-align: middle; 
+	zoom: 1;
+}
+
+#footer-nav {
+	padding: 0px;
+	list-style-type:none;
+	font-weight: bold; 
+	font-size: 12px; 
+	line-height: 14px; 
+	color: #fff; 
+	font-weight: normal; 
+	margin: 0px;
+	display: -moz-inline-stack; 
+	display: inline-block; 
+	vertical-align: middle; 
+	zoom: 1;
+}
+
+#footer-nav li {
+	margin-right: 15px; 
+	padding-right: 15px; 
+	margin-top: 5px; 
+	margin-bottom: 5px; 
+	float: left;
+}
+
+#footer-nav li a {
+	color: white !important;
+}
+
+#copyright {
+ margin-bottom: 0px;
+ color:lightgray;
 }
