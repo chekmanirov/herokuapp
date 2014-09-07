@@ -24,6 +24,10 @@ and (max-width : 450px) {
 	background: #1b1b24;
 }
 
+#section-1 {
+	background: white;
+}
+
 #section-2 {
 	color: white;
 	background: #002a5c;
@@ -169,4 +173,8 @@ line-height: 1.4;
 #copyright {
  margin-bottom: 0px;
  color:lightgray;
+}
+
+#contact-header {
+	padding-bottom: 20px;
 }
