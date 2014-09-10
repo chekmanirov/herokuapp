@@ -29,6 +29,16 @@ and (max-width : 450px) {
 }
 
 #section-2 {
+	background-color: #26343f;
+	color: white;
+}
+
+#section-3 {
+	/*background: forestgreen;
+	color:white;*/
+}
+
+#section-4 {
 	color: white;
 	background: #002a5c;
 }
@@ -175,6 +185,44 @@ line-height: 1.4;
  color:lightgray;
 }
 
-#contact-header {
-	padding-bottom: 20px;
+.section-header {
+	padding-bottom: 30px;
+}
+
+/*.project-list {
+	list-style-type: none;
+	padding-left: 0px;
+}*/
+
+.project-row {
+	background-color: white;
+margin-left: -5px;
+margin-bottom: 50px;
+box-shadow: 0px 0px 8px rgba(0,0,0,.7);
+}
+
+.project-logo {
+	padding-top:15px;
+	padding-bottom:15px;
+}
+
+.project-description {
+	padding-bottom: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.project-image {
+	-webkit-border-radius: 0px;
+-moz-border-radius: 0px;
+border-radius: 0px;
+}
+
+.project-container {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.project-name {
+	margin-top:23px;
 }

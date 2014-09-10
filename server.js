@@ -25,7 +25,6 @@ mongoose.connect(configDB.url); // connect to our database
 
 // set up our express application
 app.use(express.static(__dirname + '/public'));
-app.use(favicon(__dirname + '/public/img/favicon.ico'));
 app.use(morgan('dev')); // log every request to the console
 app.use(cookieParser()); // read cookies (needed for auth)
 app.use(bodyParser()); // get information from html forms

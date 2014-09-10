@@ -1,6 +1,6 @@
 <!-- views/signup.ejs -->
 <!doctype html>
-<html>
+<html ng-app="InertanceProfileApp">
 <head>
 	<title>heroku + kevin me | profile</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -13,7 +13,7 @@
 	<script type="text/javascript" src="/js/angular-route.min.js"></script>
 	<script type="text/javascript" src="/js/angular-animate.min.js"></script>
 	<script type="text/javascript" src="/js/googleanalytics.js"></script>
-	<!--<script type="text/javascript" src="/js/ng/index.js"></script>-->
+	<script type="text/javascript" src="/js/ng/profile.js"></script>
 </head>
 <body>
 <header class="header" role="banner">
@@ -36,7 +36,7 @@
 		<div class="row">
 			<div class="col-lg-5 col-sm-6 section-text">
 			  <h1>Hello, herokuteam!</h1>
-			  <p class="lead">Thanks for taking the time to check out my application. I wanted to create a truly stand-out job application for you, while at the same time showcasing some talent - this entire site is built and hosted on Heroku!</p>
+			  <p class="lead">Thanks for taking the time to check out my application. I wanted to create a truly stand-out job application for you, while at the same time showcasing some talent - so I built this entire site (from scratch) on Heroku.</p>
 			  <p><a class="btn btn-primary btn-primary" href="mailto:kevin.me@mail.utoronto.ca" role="button">Contact me</a></p>
 			</div>
 			<div class="col-lg-5 col-lg-offset-2 col-sm-6 section-image">
@@ -62,6 +62,87 @@
 <div id="section-2" class="profile-section">
 <div class="container">
 		<div class="row">
+			<div class="col-xs-12 text-center">
+				<h2 class="section-header">Why I want to work at Heroku</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 text-center">
+				<p class="lead">A friend of mine recently told me about Heroku. I decided to create a simple application, and immediately fell in love with the incredibly refined development experience and massive selection of add-ons that are offered. I soon realized that I wanted to be a part of shaping the future with Heroku.</p>
+				<p class="lead">I'm passionate about big data and the possibilities that modern technology has created. I'm constantly thinking of ideas that will solve today's problems and set the standards of tomorrow - I created IBM Cognos ICM Performance Analytics during my internship at IBM, which I believe will become an integral part of the product when officially productized next quarter. I take a lot of pride in my work, and always seek to make a lasting impression with every project - which is why I think I'm a great fit for your company.</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="section-3" class="profile-section">
+<div class="container-fluid project-container">
+		<div class="row">
+			<div class="col-xs-12 text-center">
+				<h2 class="section-header">Projects</h2>
+			</div>
+		</div>
+		<div class="row project-row">
+			<div class="col-xs-12">
+				<div class="row">
+								<div class="col-lg-6 col-sm-6 section-text text-center">
+				<h3 class="project-name">Cognos ICM Performance Analytics</h3>
+            </div>
+					<div class="col-lg-6 col-sm-6 section-text text-center">
+				<img class="img-responsive center-block project-logo" src="/img/ibm-logo.png" alt="IBM Logo"/>
+			</div>
+				</div>
+				<div class="row project-image well">
+					<img class="img-responsive center-block" src="/img/ImportAnalytics.png" alt=""/>
+				</div>
+				<div class="row project-description">
+					<p>I created IBM Cognos ICM Performance Analytics after I identified a large gap in the ability to identify causes of performance issues in client implementations of ICM. Performance Analytics consists of five reports which provide detailed calculations on data volumes and trends, comparisons, with information partitioned by type, date, configuration, version, and filters. My work is slated for official productization later this year.</p>
+				</div>
+			</div>
+		</div>
+		<div class="row project-row">
+			<div class="col-xs-12">
+				<div class="row">
+								<div class="col-lg-6 col-sm-6 section-text text-center">
+				<h3 class="project-name">Cognos ICM JS Editor</h3>
+            </div>
+					<div class="col-lg-6 col-sm-6 section-text text-center">
+				<img class="img-responsive center-block project-logo" src="/img/ibm-logo.png" alt="IBM Logo"/>
+			</div>
+				</div>
+				<div class="row project-image well">
+					<img class="img-responsive center-block" src="/img/jseditor.png" alt=""/>
+				</div>
+				<div class="row project-description">
+					<p>I created IBM Cognos ICM JS Editor after identifying the need to allow iterative front-end JavaScript development, which would eliminate the process of saving code in the database over numerous iterations. I designed JS Editor to be cross-browser (IE7+) and to increase development efficiency with edit-execute-refresh functionality. JS Editor is currently on the product roadmap.</p>
+				</div>
+			</div>
+		</div>
+		<div class="row project-row">
+			<div class="col-xs-12">
+				<div class="row">
+								<div class="col-lg-6 col-sm-6 section-text text-center">
+				<h3 class="project-name">Axon ETA Web</h3>
+            </div>
+					<div class="col-lg-6 col-sm-6 section-text text-center">
+				<img class="img-responsive center-block project-logo" src="/img/axon-logo.png" alt="Axon Logo"/>
+			</div>
+				</div>
+				<div class="row project-image well">
+					<img class="img-responsive center-block" src="/img/AxonWeb.png" alt=""/>
+				</div>
+				<div class="row project-description">
+					<p>My first web application, which I built over a three-month internship. I completely redeveloped Axon’s web access interface and wrote a new web framework from scratch. 
+						Axon saw a 16.5x increase in transaction volume within five months of implementation of my code.
+I designed a dynamic web interface using AJAX, caching, and pagination, while working with HTML, JavaScript (jQuery, jQueryUI), CSS, HTTP, AJAX, and Microsoft Razor.
+I also developed client-server authentication code (SHA1, salting), a dynamic routing algorithm, page layout templating, relational database structures, search and sort algorithms, and query logic.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="section-4" class="profile-section">
+<div class="container">
+		<div class="row">
 			<div class="col-lg-5 col-sm-6 section-text">
 				<h2>About me</h2>
 				<p class="lead">I'm currently in my fourth and final year studying engineering at University of Toronto. I enjoy playing sports, listening to music, and learning about new technologies in my free time. I also like to play <a id="fide-card" href="http://ratings.fide.com/card.phtml?event=2609363">chess</a> every now and then.</p>
@@ -77,11 +158,11 @@
 		</div>
 	</div>
 </div>
-<div id="section-3" class="profile-section">
+<div id="section-5" class="profile-section">
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12 text-center">
-				<h2 id="contact-header">Get in touch</h2>
+				<h2 class="section-header">Get in touch</h2>
 			</div>
 		</div>
 		<div class="row">
@@ -95,14 +176,15 @@
 			</div>
 			<div class="col-lg-5 col-lg-offset-2 col-sm-6 section-text">
 				<h4>LinkedIn</h4>
-				<a href="https://www.github.com/chekmanirov" class="btn btn-default">
-					<i class="fa fa-github fa-fw"></i> 
-					<span class="network-name">chekmanirov</span>
-				</a>
-				<h4>Github</h4>
 				<a href="http://www.linkedin.com/in/kevinme" class="btn btn-default">
 					<i class="fa fa-linkedin fa-fw"></i> 
 					<span class="network-name">Kevin Me</span></a>
+				<h4>Github</h4>
+							<a href="https://www.github.com/chekmanirov" class="btn btn-default">
+					<i class="fa fa-github fa-fw"></i> 
+					<span class="network-name">chekmanirov</span>
+				</a>
+				
             </div>
 		</div>
 	</div>
