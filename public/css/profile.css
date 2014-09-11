@@ -1,6 +1,12 @@
 @media only screen 
+and (max-device-width : 480px) {
+	margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 20px;
+}
+
+@media only screen 
 and (max-width : 450px) {
-/* mobile portrait styles */
 
 #footer {
 	text-align: left !important;
