@@ -203,30 +203,38 @@ line-height: 1.4;
 }*/
 
 .project-row {
-	background-color: white;
+	background-color: #202020;
 margin-bottom: 50px;
 margin-left: 10px;
     margin-right: 10px;
-box-shadow: 0px 0px 8px rgba(0,0,0,.7);
+/*border: 1px solid #E3E3E3;*/
 }
 
 .project-logo {
 	padding-top:15px;
 	padding-bottom:15px;
+	max-height: 70px;
 }
 
 .project-description {
 	padding-bottom: 10px;
 	padding-left: 30px;
 	padding-right: 30px;
+	color: white;
+}
+
+.project-header {
 }
 
 .project-image {
 	-webkit-border-radius: 0px;
 -moz-border-radius: 0px;
 border-radius: 0px;
+border-left: 0;
+border-right: 0;
 }
 
 .project-name {
+	color: white;
 	margin-top:23px;
 }
