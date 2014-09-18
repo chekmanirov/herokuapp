@@ -1,47 +1,16 @@
-/*
 var mongoose = require('mongoose');
 
 var profileSchema = mongoose.Schema({
-
-    profile            : {
+	_owner           : { type: Number, ref: 'User' }
+    profile          : {
         id           : String,
         url          : String
     },
-    personal         : {
-        name         : String,
-        address      : String,
-        city         : String,
-        stateProvince: String,
-        zipPostal    : String,
-        country      : String,
-        phone        : String,
-        fax          : String,
-        email:       : String,
-        linkedin     : {
-        	url      : String,
-        	name     : String
-        },
-        github       : {
-        	url      : String,
-        	name     : String
-        },
-        institution  : {
-        	name:    : String,
-        	occupation : String,
-        	program  : String,
-        	timeline : String,
-        	specialization : String
-        }
-        
-    },
-    sections         : {
-        id           : String,
-        token        : String,
-        displayName  : String,
-        username     : String
-    }
+    personal         : [{type: Schema.Types.ObjectId, ref: 'Personal'}],
+    sections         : [{type: Schema.Types.ObjectId, ref: 'Section'}],
+    headerImage      : { data: Buffer, contentType: String },
+    loginBackground  : String
 
 });
 
 module.exports = mongoose.model('Profile', profileSchema);
-*/

@@ -1,4 +1,4 @@
-	/*var mongoose = require('mongoose');
+var mongoose = require('mongoose');
 
 var personalSchema = mongoose.Schema({
         name         : String,
@@ -27,4 +27,4 @@ var personalSchema = mongoose.Schema({
         }
         });
 
-module.exports = mongoose.model('Personal', personalSchema);*/
+module.exports = mongoose.model('Personal', personalSchema);
