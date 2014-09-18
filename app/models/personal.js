@@ -9,7 +9,7 @@ var personalSchema = mongoose.Schema({
         country      : String,
         phone        : String,
         fax          : String,
-        email:       : String,
+        email        : String,
         linkedin     : {
         	url      : String,
         	name     : String
@@ -19,7 +19,7 @@ var personalSchema = mongoose.Schema({
         	name     : String
         },
         institution  : {
-        	name:    : String,
+        	name     : String,
         	occupation : String,
         	program  : String,
         	timeline : String,
