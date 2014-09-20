@@ -67,8 +67,8 @@ and (min-height : 630px) {
 
 
 body {
-	/*background: #1b1b24;*/
-	background:url('/img/vines-bg.jpg');
+	background: #1b1b24;
+	/*background:url('/img/vines-bg.jpg');*/
 }
 
 .form-control {

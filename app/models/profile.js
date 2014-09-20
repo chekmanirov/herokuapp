@@ -1,9 +1,9 @@
 var mongoose = require('mongoose');
 
 var profileSchema = mongoose.Schema({
-	_owner           : { type: Number, ref: 'User' },
+	_owner           : { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
     profile          : {
-        id           : String,
+        name         : String,
         url          : String
     },
     personal         : [{type: mongoose.Schema.Types.ObjectId, ref: 'Personal'}],

@@ -1,0 +1,55 @@
+<!-- views/signup.ejs -->
+<!doctype html>
+<html ng-app="InertanceDashboardApp">
+<head>
+	<title>inertance | dashboard</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/css/dashboard.css">
+	<script type="text/javascript" src="/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/angular.min.js"></script>
+	<script type="text/javascript" src="/js/angular-route.min.js"></script>
+	<script type="text/javascript" src="/js/angular-animate.min.js"></script>
+	<script type="text/javascript" src="/js/googleanalytics.js"></script>
+	<script type="text/javascript" src="/js/ng/dashboard.js"></script>
+</head>
+<body>
+<header class="header" role="banner">
+				<div class="container">
+					<div class="navbar-header">
+				<a class="navbar-brand" href="/profile">
+						<img class="img-responsive" src="/img/heroku-logotype-horizontal-white-updated.png" alt="heroku + kevin me"/>
+</a>				
+</div>
+<ul class="nav navbar-nav navbar-right">
+        <li id="li-user"><p><%= user.local.name %></p></li>
+        <li id="li-logout">
+        	<a id="logout" href="/logout"><span class="glyphicon glyphicon-log-out"></span></a>
+        </li>
+      </ul>
+</div>
+</header>
+<div id="dashboard-main">
+	<div>
+		<table class="table-striped table-hover table">
+			<thead>
+				<tr></tr>
+			</thead>
+		</table>
+	</div>
+</div>
+<footer id="footer">
+	<div class="wrapper">
+
+<ul id="footer-nav">
+<li><p id="copyright">© 2014 Kevin Me</p></li>
+<li><a href="/about">about</a></li>
+<li><a href="/legal">legal</a></li>
+<li><a href="mailto:kevin.me@mail.utoronto.ca">inquiries</a></li>
+</ul>
+</div>
+</footer>
+</body>
+</html>

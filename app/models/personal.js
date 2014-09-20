@@ -26,6 +26,7 @@ var personalSchema = mongoose.Schema({
         	specialization : String
         }
         });
+		user: {type: mongoose.Schema.Types.ObjectId, ref: 'User'}
 
 
 module.exports = mongoose.model('Personal', personalSchema);

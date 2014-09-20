@@ -38,6 +38,79 @@ module.exports = function(app, passport) {
 		failureRedirect : '/', // redirect back to the signup page if there is an error
 		failureFlash : true // allow flash messages
 	}));
+	
+	
+	//
+	
+	/*var personalSchema = mongoose.Schema({
+    name         : String,
+    address      : String,
+    city         : String,
+    stateProvince: String,
+    zipPostal    : String,
+    country      : String,
+    phone        : String,
+    fax          : String,
+    email        : String,
+    linkedin     : {
+    	url      : String,
+    	name     : String
+    },
+    github       : {
+    	url      : String,
+    	name     : String
+    },
+    institution  : {
+    	name     : String,
+    	occupation : String,
+    	program  : String,
+    	timeline : String,
+    	specialization : String
+    }
+    });*/    
+	
+	/*app.post('/personal/add', isLoggedIn, function(req, res) {
+			var user = req.user;
+	
+	function(req, done) {
+	    // asynchronous
+	    // User.findOne wont fire unless data is sent back
+	    process.nextTick(function() {
+
+		// find a user whose email is the same as the forms email
+		// we are checking to see if the user trying to login already exists
+	    Personal.findOne({ 'user': user, 'email' :  email }, function(err, user) {
+	        // if there are any errors, return the error
+	        if (err)
+	            return done(err);
+
+	        // check to see if there is already a user with that username
+	        if (user && email) {
+	            return done(null, false, req.flash('signupMessage', 'Contact information associated with that email address already exists.'));
+	        } else {
+
+				// if there is no user with that email
+	            // create the user
+	            var newPersonal            = new Personal();
+
+	            // set the user's local credentials
+	            newPersonal.user    = user;
+	            newPersonal.name = "";
+
+				// save the user
+	            newPersonal.save(function(err) {
+	                if (err)
+	                    throw err;
+	                return done(null, newPersonal);
+	            });
+	        }
+
+	    });    
+
+	    });
+
+	}
+	});*/
 
 	// =====================================
 	// PROFILE ==============================
@@ -46,6 +119,16 @@ module.exports = function(app, passport) {
 	
 	app.get('/profile', isLoggedIn, function(req, res) {
 		res.render('profile.ejs', {
+			user : req.user // get the user out of session and pass to template
+		});
+	});
+	
+	// =====================================
+	// DASHBOARD ==============================
+	// =====================================
+	
+	app.get('/dashboard', isLoggedIn, function(req, res) {
+		res.render('dashboard.ejs', {
 			user : req.user // get the user out of session and pass to template
 		});
 	});
