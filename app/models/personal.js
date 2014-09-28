@@ -1,7 +1,9 @@
 var mongoose = require('mongoose');
 
 var personalSchema = mongoose.Schema({
-        name         : String,
+        firstName    : String,
+        middleName   : String,
+        lastName     : String,
         address      : String,
         city         : String,
         stateProvince: String,
@@ -24,9 +26,9 @@ var personalSchema = mongoose.Schema({
         	program  : String,
         	timeline : String,
         	specialization : String
-        }
+        },
+        user: {type: mongoose.Schema.Types.ObjectId, ref: 'User'}
         });
-		user: {type: mongoose.Schema.Types.ObjectId, ref: 'User'}
 
 
 module.exports = mongoose.model('Personal', personalSchema);

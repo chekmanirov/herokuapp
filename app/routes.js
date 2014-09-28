@@ -69,17 +69,54 @@ module.exports = function(app, passport) {
     }
     });*/    
 	
-	/*app.post('/personal/add', isLoggedIn, function(req, res) {
-			var user = req.user;
-	
-	function(req, done) {
+	app.post('/personal/add', isLoggedIn, function(req, res) {
+			var userid = req.user._id;
+	console.log('user: ' + userid);
 	    // asynchronous
-	    // User.findOne wont fire unless data is sent back
 	    process.nextTick(function() {
-
+	    	var User = require('../app/models/user.js');
+	    	User.findOne({ '_id': userid }, function(err, user) {
+	    		console.log(user);
+		        if (err)
+		            return done(err);
+		        var Personal       	= require('../app/models/personal.js');
+		        var newPersonal = new Personal({
+			        firstName  : 'Kevin',
+			        lastName   : 'Me',
+			        address    : '386 Yonge St. #1019',
+			        city         : 'Toronto',
+			        stateProvince: 'Ontario',
+			        zipPostal    : 'M5B0A5',
+			        country      : 'Canada',
+			        phone        : '+1 (647)992-1733',
+			        fax          : '',
+			        email        : 'kevin.me@mail.utoronto.ca',
+			        linkedin : {url : 'https://https://www.linkedin.com/in/kevinme',
+			        name: 'Kevin Me'},
+			        github : { url : 'https://www.github.com/chekmanirov', 
+			        	name: 'chekmanirov'},
+			        institution  : {
+			        	name     : 'University of Toronto',
+			        	occupation : 'Student',
+			        	program  : 'BaSc Mechanical Engineering, Dean\'s List',
+			        	timeline : '2010-2015 (1T4+PEY)',
+			        	specialization : 'Mechatronics and Bioengineering'
+			        },
+			        user   : user._id
+		        });
+		        
+	            newPersonal.save(function(err) {
+	                if (err)
+	                    throw err;
+	                return "";
+	            });
+	    	});
+	    
+	    	
+	    /*	
 		// find a user whose email is the same as the forms email
 		// we are checking to see if the user trying to login already exists
-	    Personal.findOne({ 'user': user, 'email' :  email }, function(err, user) {
+	    User.findOne({ 'user': user }, function(err, user) {
 	        // if there are any errors, return the error
 	        if (err)
 	            return done(err);
@@ -106,11 +143,9 @@ module.exports = function(app, passport) {
 	        }
 
 	    });    
-
+*/
 	    });
-
-	}
-	});*/
+	});
 
 	// =====================================
 	// PROFILE ==============================
