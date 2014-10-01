@@ -40,6 +40,38 @@ module.exports = function(app, passport) {
 	}));
 	
 	
+	/*app.post('/profile/add', isLoggedIn, function(req, res) {
+		var userid = req.user._id;
+    // asynchronous
+    process.nextTick(function() {
+    	var User = require('../app/models/user.js');
+    	User.findOne({ '_id': userid }, function(err, user) {
+	        if (err)
+	            return done(err);
+	        var Profile       	= require('../app/models/profile.js');
+	        var newProfile = new Profile({
+
+		        _owner   : user._id,
+		        profile  : {
+		        	name:        : "Heroku",
+		        	url          : "heroku"
+		        },
+		        personal         : ObjectId("541e53719433e5d03bf9d5d9"),
+		        sections         : [],
+		        headerImage      : ,
+		        loginBackground  : 
+	        });
+	        
+            newProfile.save(function(err) {
+                if (err)
+                    throw err;
+                return "";
+            });
+    	});
+
+    });
+});*/
+	
 	//
 	
 	/*var personalSchema = mongoose.Schema({
@@ -202,6 +234,21 @@ module.exports = function(app, passport) {
 	app.get('/logout', function(req, res) {
 		req.logout();
 		res.redirect('/');
+	});
+	
+	app.get('/:profile/profile', isLoggedIn, function(req, res) {
+		Profile.findOne({ 'url': req.params.profile }, function(err, profile) {
+	        // if there are any errors, return the error
+	        if (err)
+	            return done(err);
+	        else {
+	        	res.render('profile.ejs', {
+	    			user : req.user
+	    		});
+	        }
+
+	    });    
+		
 	});
 };
 

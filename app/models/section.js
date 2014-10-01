@@ -1,11 +1,12 @@
 var mongoose = require('mongoose');
 
 var sectionSchema = mongoose.Schema({
-		background  : String,
+		_owner      : { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+		background  : {type: mongoose.Schema.Types.ObjectId, ref: 'Content'},
 		header      : String,
-		leftCol     : String,
-		rightCol    : String,
-		centerCol   : String
+		leftCol     : {type: mongoose.Schema.Types.ObjectId, ref: 'Content'},
+		rightCol    : {type: mongoose.Schema.Types.ObjectId, ref: 'Content'},
+		centerCol   : {type: mongoose.Schema.Types.ObjectId, ref: 'Content'}
         });
 
 

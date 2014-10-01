@@ -1,6 +1,8 @@
 var app = angular.module('InertanceProfileApp', []);
 
-/*app.controller("xyzController", function($scope){
-	 $scope.var1 = "";
-	 $scope.var2 = "";
-});*/
+/*app.controller('BaseContentController', function($scope, $http) {
+	  $http.get('todos.json')
+	       .then(function(res){
+	          $scope.baseContent = res.data;                
+	        });
+	});*/

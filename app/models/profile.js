@@ -6,11 +6,11 @@ var profileSchema = mongoose.Schema({
         name         : String,
         url          : String
     },
-    personal         : [{type: mongoose.Schema.Types.ObjectId, ref: 'Personal'}],
+    personal         : {type: mongoose.Schema.Types.ObjectId, ref: 'Personal'},
     sections         : [{type: mongoose.Schema.Types.ObjectId, ref: 'Section'}],
-    headerImage      : { data: Buffer, contentType: String },
-    loginBackground  : String
-
+    headerImage      : {type: mongoose.Schema.Types.ObjectId, ref: 'Content'},
+    headerBackground : {type: mongoose.Schema.Types.ObjectId, ref: 'Content'},
+    loginBackground  : {type: mongoose.Schema.Types.ObjectId, ref: 'Content'}
 });
 
 
