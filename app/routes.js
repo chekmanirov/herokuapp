@@ -53,12 +53,13 @@ module.exports = function(app, passport) {
 
 		        _owner   : user._id,
 		        profile  : {
-		        	name:        : "Heroku",
-		        	url          : "heroku"
+		        	name:        : 'Heroku',
+		        	url          : 'heroku'
 		        },
 		        personal         : ObjectId("541e53719433e5d03bf9d5d9"),
 		        sections         : [],
 		        headerImage      : ,
+		        headerBackground : ,
 		        loginBackground  : 
 	        });
 	        
