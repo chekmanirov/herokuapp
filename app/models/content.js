@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 
 var contentSchema = mongoose.Schema({
 		_owner      : { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
-		name        : String,
+		desc        : String,
 		type        : String,
 		value       : String,
 		path        : String,

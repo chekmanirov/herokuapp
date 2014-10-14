@@ -38,7 +38,70 @@ module.exports = function(app, passport) {
 		failureRedirect : '/', // redirect back to the signup page if there is an error
 		failureFlash : true // allow flash messages
 	}));
+
+// bunch of temp stuff for testing	
 	
+	app.post('/content/add', isLoggedIn, function(req, res) {
+	var userid = req.user._id;
+// asynchronous
+process.nextTick(function() {
+	var User = require('../app/models/user.js');
+	User.findOne({ '_id': userid }, function(err, user) {
+        if (err)
+            return done(err);
+        var Content       	= require('../app/models/content.js');
+        var newContent = new Content({
+
+		_owner      : user._id,
+		desc        : 'Why I want to work at Heroku',
+		type        : 'text',
+		value       : 'A friend of mine recently told me about Heroku. I decided to create a simple application, and immediately fell in love with the incredibly refined development experience and massive selection of add-ons that are offered. I soon realized that I wanted to be a part of shaping the future with Heroku. I\'m passionate about big data and the possibilities that modern technology has created. I\'m constantly thinking of ideas that will solve today\'s problems and set the standards of tomorrow - I created IBM Cognos ICM Performance Analytics during my internship at IBM, which I believe will become an integral part of the product when officially productized next quarter. I take a lot of pride in my work, and always seek to make a lasting impression with every project - which is why I think I\'m a great fit for your company.',
+		path        : '',
+		cssProperty : '',
+		font        : '',
+		fontsize    : ''
+        });
+        
+        newContent.save(function(err) {
+            if (err)
+                throw err;
+            return "";
+        });
+	});
+
+});
+});
+	
+	/*	app.post('/section/add', isLoggedIn, function(req, res) {
+	var userid = req.user._id;
+// asynchronous
+process.nextTick(function() {
+	var User = require('../app/models/user.js');
+	User.findOne({ '_id': userid }, function(err, user) {
+        if (err)
+            return done(err);
+        var Section       	= require('../app/models/content.js');
+        var newSection = new Section({
+
+		_owner      : user._id,
+		background  : {type: mongoose.Schema.Types.ObjectId, ref: 'Content'},
+		centerHeader: String,
+		leftHeader  : String,
+		rightHeader : String,
+		leftCol     : {type: mongoose.Schema.Types.ObjectId, ref: 'Content'},
+		rightCol    : {type: mongoose.Schema.Types.ObjectId, ref: 'Content'},
+		centerCol   : {type: mongoose.Schema.Types.ObjectId, ref: 'Content'}
+        });
+        
+        newContent.save(function(err) {
+            if (err)
+                throw err;
+            return "";
+        });
+	});
+
+});
+});*/
 	
 	/*app.post('/profile/add', isLoggedIn, function(req, res) {
 		var userid = req.user._id;
@@ -249,6 +312,11 @@ module.exports = function(app, passport) {
 	        }
 
 	    });    
+		
+	});
+	
+	app.get('*', function(req, res) {
+		res.render('error404.ejs');
 		
 	});
 };
